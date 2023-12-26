@@ -1,8 +1,13 @@
+const AppError = require("../utils/AppError")
+
 class usersController {
   async create(request, response) {
     const { name, email, password } = request.body
 
-    return response.json({
+    if(!name){
+      throw new AppError('nome e obrigatorio')
+    }
+    return response.status(201).json({
       name,
       email,
       password,
