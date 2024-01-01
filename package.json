@@ -4,7 +4,8 @@
   "description": "API for Rocket Notes App",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./src/Server.js"
+    "dev": "nodemon ./src/Server.js",
+    "migrate": "knex migrate:latest"
   },
   "author": "Clemilson Azevedo",
   "license": "MIT",
